@@ -35,7 +35,7 @@
 					$.mobile.loading('show');
 					var nextpage = $(this).next('div[data-role="page"]');
 					if(nextpage.length > 0){
-						$.mobile.changePage(nextpage, {transition: "slide", reverse: false, changeHash: false});
+						$.mobile.changePage(nextpage, {transition: "slide", reverse: true }, true, true);
 						$('img[usemap]').rwdImageMaps();
 						//$(".paginas img").attr("usemap","#map"+$(this).next('div[data-role="page"]').attr("id"));
 					}
