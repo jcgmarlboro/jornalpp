@@ -36,7 +36,8 @@
 					var nextpage = $(this).next('div[data-role="page"]');
 					if(nextpage.length > 0){
 						$.mobile.changePage(nextpage, {transition: "slide", reverse: false, changeHash: false});
-						$(".paginas img").attr("usemap","#map"+$(this).next('div[data-role="page"]').attr("id"));
+						$('img[usemap]').rwdImageMaps();
+						//$(".paginas img").attr("usemap","#map"+$(this).next('div[data-role="page"]').attr("id"));
 					}
 					$.mobile.loading('hide');
 				});
@@ -45,7 +46,8 @@
 					var prevpage = $(this).prev('div[data-role="page"]');
 					if(prevpage.length > 0){
 						$.mobile.changePage(prevpage, { transition: "slide", reverse: true }, true, true);
-						$(".paginas img").attr("usemap","#map"+$(this).prev('div[data-role="page"]').attr("id"));
+						$('img[usemap]').rwdImageMaps();
+						//$(".paginas img").attr("usemap","#map"+$(this).prev('div[data-role="page"]').attr("id"));
 					}
 					$.mobile.loading('hide');
 				});
@@ -85,34 +87,20 @@
 		
 		<style type="text/css">
 			.ui-content{ padding: 0 !important; }
+			img[usemap] {
+				border: none;
+				height: auto;
+				max-width: 100%;
+				width: auto;
+			}
 		</style>
-		
-		<script type="text/javascript">
-			$(document).ready(function(e) {
-				$('img[usemap]').rwdImageMaps();
-			});
-		</script>
 		
 	</head>
 
 	<body>
-		<map name="mapp2">
-			<area shape="rect" coords="868, 1216, 1023, 1586" class="anuncios" id="selo2" data-popup="mapp2" />
-			<area shape="rect" coords="6, 1602, 1018, 1820" class="anuncios" id="rodape" data-popup="mapp2" />
-			<area shape="rect" coords="0, 1410, 158, 1587" class="anuncios" id="selo" data-popup="mapp2" />
-			<area shape="rect" coords="1, 1216, 155, 1393" class="anuncios" id="selo" data-popup="mapp2" />
-			<area shape="rect" coords="868, 167, 1023, 338" class="anuncios" id="selo" data-popup="mapp2" />
-			<area shape="rect" coords="867, 15, 1023, 98" class="anuncios" id="selo" data-popup="mapp2" />
-			<area shape="rect" coords="1, 170, 152, 337" class="anuncios" id="selo" data-popup="mapp2" />
-		</map>
-		<map name="mapp5">
-			<area shape="rect" coords="1, 1464, 1023, 1815" class="anuncios" id="rodape2" data-popup="mapp5" />
-    		<area shape="rect" coords="2, 1160, 502, 1440" class="anuncios" id="anuncio35" data-popup="mapp5" />
-		</map>
-		<map name="mapp8">
-			<area shape="rect" coords="1, 1475, 503, 1818" class="anuncios" id="selo" data-popup="mapp8" />
-    		<area shape="rect" coords="522, 454, 1022, 1827" class="anuncios" id="selo" data-popup="mapp8" />
-		</map>
+		
+		
+		
 		
 		
 		<!-- Página 1 -->
@@ -124,8 +112,7 @@
 			</div>
 			
 			<div data-role="main" class="ui-content">
-				<!--<img src="arquivos/PP01.jpg" class="img-responsive" />-->
-				<img src="/storage/sdcard0/airdroid/upload/PP01.jpg" class="img-responsive" />
+				<img src="arquivos/PP02.jpg" class="img-responsive" />
 			</div>
 
 			<div data-role="panel" class="menu">
@@ -151,8 +138,16 @@
 			</div>
 			
 			<div data-role="main">
-				<!--<img src="arquivos/PP02.jpg" class="img-responsive" />-->
-				<img src="/storage/sdcard0/airdroid/upload/PP02.jpg" class="img-responsive" />
+				<img src="arquivos/PP02.jpg" class="img-responsive" usemap="#mapp2" />
+				<map name="mapp2">
+					<area shape="rect" coords="868, 1216, 1023, 1586" class="anuncios" id="selo2" data-popup="mapp2" />
+					<area shape="rect" coords="6, 1602, 1018, 1820" class="anuncios" id="rodape" data-popup="mapp2" />
+					<area shape="rect" coords="0, 1410, 158, 1587" class="anuncios" id="selo" data-popup="mapp2" />
+					<area shape="rect" coords="1, 1216, 155, 1393" class="anuncios" id="selo" data-popup="mapp2" />
+					<area shape="rect" coords="868, 167, 1023, 338" class="anuncios" id="selo" data-popup="mapp2" />
+					<area shape="rect" coords="867, 15, 1023, 98" class="anuncios" id="selo" data-popup="mapp2" />
+					<area shape="rect" coords="1, 170, 152, 337" class="anuncios" id="selo" data-popup="mapp2" />
+				</map>
 			</div>
 			<div data-role="panel" class="menu">
 				<div class="ui-panel-inner">
@@ -171,12 +166,12 @@
 		
 		<div data-role="page" id="p3" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP03.jpg" class="img-responsive" />
+				<img src="arquivos/PP03.jpg" class="img-responsive" />
 			</div>
 		</div>
 		<div data-role="page" id="p4" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP04.jpg" class="img-responsive" />
+				<img src="arquivos/PP04.jpg" class="img-responsive" />
 			</div>
 		</div>
 		<div data-role="page" id="p5" class="paginas">
@@ -185,17 +180,21 @@
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;">Selo de capa<br />Tamanho: 10x20</p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP05.jpg" class="img-responsive" />
+				<img src="arquivos/PP05.jpg" class="img-responsive" usemap="#mapp5" />
+				<map name="mapp5">
+					<area shape="rect" coords="1, 1464, 1023, 1815" class="anuncios" id="rodape2" data-popup="mapp5" />
+    				<area shape="rect" coords="2, 1160, 502, 1440" class="anuncios" id="anuncio35" data-popup="mapp5" />
+				</map>
 			</div>
 		</div>
 		<div data-role="page" id="p6" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP06.jpg" class="img-responsive" />
+				<img src="arquivos/PP06.jpg" class="img-responsive" />
 			</div>
 		</div>
 		<div data-role="page" id="p7" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP07.jpg" class="img-responsive" />
+				<img src="arquivos/PP07.jpg" class="img-responsive" />
 			</div>
 		</div>
 		<div data-role="page" id="p8" class="paginas">
@@ -204,113 +203,121 @@
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;">Selo de capa<br />Tamanho: 10x20</p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP08.jpg" class="img-responsive" />
+				<img src="arquivos/PP08.jpg" class="img-responsive" usemap="#mapp8" />
+				<map name="mapp8">
+					<area shape="rect" coords="1, 1475, 503, 1818" class="anuncios" id="selo" data-popup="mapp8" />
+					<area shape="rect" coords="522, 454, 1022, 1827" class="anuncios" id="selo" data-popup="mapp8" />
+				</map>
 			</div>
 		</div>
 		
 		<div data-role="page" id="p9" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP09.jpg" class="img-responsive" />
+				<img src="arquivos/PP09.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p10" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP10.jpg" class="img-responsive" />
+				<img src="arquivos/PP10.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p11" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP11.jpg" class="img-responsive" />
+				<img src="arquivos/PP11.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p12" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP12.jpg" class="img-responsive" />
+				<img src="arquivos/PP12.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p13" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP13.jpg" class="img-responsive" />
+				<img src="arquivos/PP13.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p14" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP14.jpg" class="img-responsive" />
+				<img src="arquivos/PP14.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p15" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP15.jpg" class="img-responsive" />
+				<img src="arquivos/PP15.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p16" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP16.jpg" class="img-responsive" />
+				<img src="arquivos/PP16.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p17" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP17.jpg" class="img-responsive" />
+				<img src="arquivos/PP17.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p18" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP18.jpg" class="img-responsive" />
+				<img src="arquivos/PP18.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p19" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP19.jpg" class="img-responsive" />
+				<img src="arquivos/PP19.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p20" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP20.jpg" class="img-responsive" />
+				<img src="arquivos/PP20.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p21" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP21.jpg" class="img-responsive" />
+				<img src="arquivos/PP21.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p22" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP22.jpg" class="img-responsive" />
+				<img src="arquivos/PP22.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p23" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP23.jpg" class="img-responsive" />
+				<img src="arquivos/PP23.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p24" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP24.jpg" class="img-responsive" />
+				<img src="arquivos/PP24.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
 		<div data-role="page" id="p25" class="paginas">
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/PP25.jpg" class="img-responsive" />
+				<img src="arquivos/PP25.jpg" class="img-responsive" />
 			</div>
 		</div>
 		
-		
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				//$('img[usemap]').rwdImageMaps();
+			});
+		</script>
 		
 	</body>
 </html>
