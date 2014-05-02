@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<title>Vendas Jornal Primeira Página</title>
@@ -13,10 +11,6 @@
 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		
@@ -77,7 +71,7 @@
 				});
 				
 				$(".paginas").on("taphold", function(){
-					$(".menu").panel("open");
+					$(".menu#"+$(this).attr("id")).panel("open");
 				});
 				$(".fecharPainel").click(function(){
 					$(".menu").panel("close");
@@ -99,10 +93,6 @@
 
 	<body>
 		
-		
-		
-		
-		
 		<!-- Página 1 -->
 		<div data-role="page" id="p1" class="paginas">
 			
@@ -115,14 +105,16 @@
 				<img src="/storage/sdcard0/airdroid/upload/PP01.jpg" class="img-responsive" />
 			</div>
 
-			<div data-role="panel" class="menu">
+			<div data-role="panel" class="menu" id="p1">
 				<div class="ui-panel-inner">
 					<ul data-role="listview" data-inset="true" data-theme="a">
 						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
 						<li><a href="#p1">Caderno A</a></li>
-						<li><a href="#p18">Caderno B</a></li>
-						<li><a href="#">Caderno C</a></li>
-						<li><a href="#">Caderno D</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
 					</ul>
 				</div>
    			</div>
@@ -149,31 +141,68 @@
 					<area shape="rect" coords="1, 170, 152, 337" class="anuncios" id="selo" data-popup="mapp2" />
 				</map>
 			</div>
-			<div data-role="panel" class="menu">
+			
+			<div data-role="panel" class="menu" id="p2">
 				<div class="ui-panel-inner">
 					<ul data-role="listview" data-inset="true" data-theme="a">
 						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
 						<li><a href="#p1">Caderno A</a></li>
-						<li><a href="#p18">Caderno B</a></li>
-						<li><a href="#">Caderno C</a></li>
-						<li><a href="#">Caderno D</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
 					</ul>
 				</div>
    			</div>
 		</div>
 		<!-- // Página 2 -->
 		
-		
+		<!-- Página 3 -->
 		<div data-role="page" id="p3" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP03.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p3">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 3 -->
+		
+		<!-- Página 4 -->
 		<div data-role="page" id="p4" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP04.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p4">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 4 -->
+		
+		<!-- Página 5 -->
 		<div data-role="page" id="p5" class="paginas">
 			<div data-role="popup" id="mapp5" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -186,17 +215,68 @@
     				<area shape="rect" coords="2, 1160, 502, 1440" class="anuncios" id="anuncio35" data-popup="mapp5" />
 				</map>
 			</div>
+			
+			<div data-role="panel" class="menu" id="p5">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 5 -->
+		
+		<!-- Página 6 -->
 		<div data-role="page" id="p6" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP06.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p6">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 6 -->
+		
+		<!-- Página 7 -->
 		<div data-role="page" id="p7" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP07.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p7">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 7 -->
+		
+		<!-- Página 8 -->
 		<div data-role="page" id="p8" class="paginas">
 			<div data-role="popup" id="mapp8" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -209,115 +289,924 @@
 					<area shape="rect" coords="522, 454, 1022, 1827" class="anuncios" id="selo" data-popup="mapp8" />
 				</map>
 			</div>
+			
+			<div data-role="panel" class="menu" id="p8">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 8 -->
 		
+		<!-- Página 9 -->
 		<div data-role="page" id="p9" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP09.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p9">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 9 -->
 		
+		<!-- Página 10 -->
 		<div data-role="page" id="p10" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP10.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p10">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 10 -->
 		
+		<!-- Página 11 -->
 		<div data-role="page" id="p11" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP11.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p11">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 11 -->
 		
+		<!-- Página 12 -->
 		<div data-role="page" id="p12" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP12.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p12">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 12 -->
 		
+		<!-- Página 13 -->
 		<div data-role="page" id="p13" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP13.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p13">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 13 -->
 		
+		<!-- Página 14 -->
 		<div data-role="page" id="p14" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP14.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p14">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 14 -->
 		
+		<!-- Página 15 -->
 		<div data-role="page" id="p15" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP15.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p15">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 15 -->
 		
+		<!-- Página 16 -->
 		<div data-role="page" id="p16" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP16.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p16">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 16 -->
 		
+		<!-- Página 17 -->
 		<div data-role="page" id="p17" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP17.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p17">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 17 -->
 		
+		<!-- Página 18 -->
 		<div data-role="page" id="p18" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP18.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p18">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 18 -->
 		
+		<!-- Página 19 -->
 		<div data-role="page" id="p19" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP19.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p19">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 19 -->
 		
+		<!-- Página 20 -->
 		<div data-role="page" id="p20" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP20.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p20">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 20 -->
 		
+		<!-- Página 21 -->
 		<div data-role="page" id="p21" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP21.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p21">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 21 -->
 		
+		<!-- Página 22 -->
 		<div data-role="page" id="p22" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP22.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p22">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 22 -->
 		
+		<!-- Página 23 -->
 		<div data-role="page" id="p23" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP23.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p23">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 23 -->
 		
+		<!-- Página 24 -->
 		<div data-role="page" id="p24" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP24.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p24">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 24 -->
 		
+		<!-- Página 25 -->
 		<div data-role="page" id="p25" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP25.jpg" class="img-responsive" />
 			</div>
+			
+			<div data-role="panel" class="menu" id="p25">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
 		</div>
+		<!-- // Página 25 -->
 		
-		<script type="text/javascript">
-			$(document).ready(function(e) {
-				//$('img[usemap]').rwdImageMaps();
-			});
-		</script>
+		<!-- Página 26 -->
+		<div data-role="page" id="p26" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP26.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p26">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 26 -->
+		
+		<!-- Página 27 -->
+		<div data-role="page" id="p27" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP27.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p27">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 27 -->
+		
+		<!-- Página 28 -->
+		<div data-role="page" id="p28" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP28.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p28">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 28 -->
+		
+		<!-- Página 29 -->
+		<div data-role="page" id="p29" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP29.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p29">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 29 -->
+		
+		<!-- Página 30 -->
+		<div data-role="page" id="p30" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP30.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p30">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 30 -->
+		
+		<!-- Página 31 -->
+		<div data-role="page" id="p31" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP31.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p31">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 31 -->
+		
+		<!-- Página 32 -->
+		<div data-role="page" id="p32" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP32.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p32">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 32 -->
+		
+		<!-- Página 33 -->
+		<div data-role="page" id="p33" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP33.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p33">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 33 -->
+		
+		<!-- Página 34 -->
+		<div data-role="page" id="p34" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP34.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p34">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 34 -->
+		
+		<!-- Página 35 -->
+		<div data-role="page" id="p35" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP35.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p35">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 35 -->
+		
+		<!-- Página 36 -->
+		<div data-role="page" id="p36" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP36.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p36">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 36 -->
+		
+		<!-- Página 37 -->
+		<div data-role="page" id="p37" class="paginas" id="p37">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP37.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 37 -->
+		
+		<!-- Página 38 -->
+		<div data-role="page" id="p38" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP38.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p38">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 38 -->
+		
+		<!-- Página 39 -->
+		<div data-role="page" id="p39" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP39.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p39">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 39 -->
+		
+		<!-- Página 40 -->
+		<div data-role="page" id="p40" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP40.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p40">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 40 -->
+		
+		<!-- Página 41 -->
+		<div data-role="page" id="p41" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP41.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p41">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 41 -->
+		
+		<!-- Página 42 -->
+		<div data-role="page" id="p42" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP42.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p42">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 42 -->
+		
+		<!-- Página 43 -->
+		<div data-role="page" id="p43" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP43.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p43">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 43 -->
+		
+		<!-- Página 44 -->
+		<div data-role="page" id="p44" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP44.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p44">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 44 -->
+		
+		<!-- Página 45 -->
+		<div data-role="page" id="p45" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP45.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p45">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 45 -->
+		
+		<!-- Página 46 -->
+		<div data-role="page" id="p46" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP46.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p46">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 46 -->
+		
+		<!-- Página 47 -->
+		<div data-role="page" id="p47" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP47.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p47">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 47 -->
+		
+		<!-- Página 48 -->
+		<div data-role="page" id="p48" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP48.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p48">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 48 -->
+		
+		<!-- Página 49 -->
+		<div data-role="page" id="p49" class="paginas">
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/PP49.jpg" class="img-responsive" />
+			</div>
+			
+			<div data-role="panel" class="menu" id="p49">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a href="#p1">Caderno A</a></li>
+						<li><a href="#p18">Cidades</a></li>
+						<li><a href="#p26">Esportes</a></li>
+						<li><a href="#p29">Cultura</a></li>
+						<li><a href="#p34">Jornal do Carro</a></li>
+						<li><a href="#p42">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Página 49 -->
 		
 	</body>
 </html>
