@@ -55,6 +55,26 @@
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Anúncio 2x10<br />Tamanho: 2col x 10cm");
 						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anun3x13"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio 3x13<br />Tamanho: 3col x 13cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anun3x20"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio 3x20<br />Tamanho: 3col x 20cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anun3x26"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio 3x26<br />Tamanho: 3col x 26cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anun6x10"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio 6x10<br />Tamanho: 6col x 10cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anun6x26"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio 6x26<br />Tamanho: 6col x 26cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
 					}else if($(this).attr("id") == "selo"){
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Selo de capa<br />Tamanho: 1x5");
@@ -148,7 +168,7 @@
 		</div>
 		<!-- // Página 1 -->
 		
-		<!-- Anúncio -->
+		<!-- Anúncio 2x5 e 2x10 -->
 		<div data-role="page" id="p2" class="paginas">
 			<div data-role="popup" id="mapp2" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -178,6 +198,148 @@
    			</div>
 		</div>
 		<!-- // Anúncio -->
+		
+		<!-- Anúncio 3x13 -->
+		<div data-role="page" id="p3" class="paginas">
+			<div data-role="popup" id="mapp3" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/3-13.jpg" class="img-responsive" usemap="#mapp3" />
+				<map name="mapp3">
+    				<area shape="rect" coords="522, 1405, 1022, 1841" class="anuncios" id="anun3x13" data-popup="mapp3" />
+    				<area shape="rect" coords="1, 1404, 503, 1841" class="anuncios" id="anun3x13" data-popup="mapp3" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p3">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 3x13 -->
+		
+		<!-- Anúncio 3x20 -->
+		<div data-role="page" id="p4" class="paginas">
+			<div data-role="popup" id="mapp4" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/3-20.jpg" class="img-responsive" usemap="#mapp4" />
+				<map name="mapp4">
+    				<area shape="rect" coords="521, 1211, 1023, 1830" class="anuncios" id="anun3x20" data-popup="mapp4" />
+					<area shape="rect" coords="1, 1212, 506, 1830" class="anuncios" id="anun3x20" data-popup="mapp4" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p4">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 3x20 -->
+		
+		<!-- Anúncio 3x26 -->
+		<div data-role="page" id="p5" class="paginas">
+			<div data-role="popup" id="mapp5" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/3-26.jpg" class="img-responsive" usemap="#mapp5" />
+				<map name="mapp5">
+					<area shape="rect" coords="2, 1021, 505, 1813" class="anuncios" id="anun3x26" data-popup="mapp5" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p5">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 3x26 -->
+		
+		<!-- Anúncio 6x10 -->
+		<div data-role="page" id="p6" class="paginas">
+			<div data-role="popup" id="mapp6" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/6-10.jpg" class="img-responsive" usemap="#mapp6" />
+				<map name="mapp6">
+					<area shape="rect" coords="3, 1495, 1023, 1820" class="anuncios" id="anun6x10" data-popup="mapp6" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p6">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 6x10 -->
+		
+		<!-- Anúncio 6x26 -->
+		<div data-role="page" id="p7" class="paginas">
+			<div data-role="popup" id="mapp7" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/6-26.jpg" class="img-responsive" usemap="#mapp7" />
+				<map name="mapp6">
+					<area shape="rect" coords="1, 934, 1022, 1820" class="anuncios" id="anun6x26" data-popup="mapp7" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p7">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete" class="fecharPainel"><a href="#">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 6x26 --> 
 
 		<!-- Página 2 
 		<div data-role="page" id="p2" class="paginas">
