@@ -7,10 +7,9 @@
 
 		<title>Vendas Jornal Primeira Página</title>
 		<meta name="description" content="">
-		<meta name="author" content="TI01">
+		<meta name="author" content="Julio C. Gava">
 
-		<!--<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0">-->
-		<meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -23,7 +22,7 @@
 		<script>
 			$(function(){
 				$(document).bind("mobileinit", function(){
-					$.extend($.mobile.zoom, {locked:false,enabled:true});
+					$.mobile.metaViewportContent = "width=device-width, minimum-scale=1, maximum-scale=2";
   					$.support.touchOverflow = true;
   					$.mobile.touchOverflowEnabled = true;
 				});
