@@ -55,6 +55,10 @@
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Anúncio 2x10<br />Tamanho: 2col x 10cm");
 						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anun2x40"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio 2x40<br />Tamanho: 2col x 40cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
 					}else if($(this).attr("id") == "anun3x10"){
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Anúncio 3x10<br />Tamanho: 3col x 10cm");
@@ -78,6 +82,10 @@
 					}else if($(this).attr("id") == "anun6x26"){
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Anúncio 6x26<br />Tamanho: 6col x 26cm");
+						$("#"+popup).popup("open",{positionTo: "window"});
+					}else if($(this).attr("id") == "anunIlhado"){
+						var popup = $(this).attr("data-popup");
+						$("#"+popup+" p").html("Anúncio Ilhado");
 						$("#"+popup).popup("open",{positionTo: "window"});
 					}else if($(this).attr("id") == "selo"){
 						var popup = $(this).attr("data-popup");
@@ -115,6 +123,9 @@
 				$(".anun2-10").click(function(){
 					$.mobile.changePage($(this).attr("id"));
 				});
+				$(".anun2-40").click(function(){
+					$.mobile.changePage($(this).attr("id"));
+				});
 				$(".anun3-10").click(function(){
 					$.mobile.changePage($(this).attr("id"));
 				});
@@ -131,6 +142,9 @@
 					$.mobile.changePage($(this).attr("id"));
 				});
 				$(".anun6-26").click(function(){
+					$.mobile.changePage($(this).attr("id"));
+				});
+				$(".anunIlhado").click(function(){
 					$.mobile.changePage($(this).attr("id"));
 				});
 				$(".cad1").click(function(){
@@ -243,17 +257,16 @@
 		</div>
 		<!-- // Anúncio -->
 		
-		<!-- Anúncio 3x10 -->
+		<!-- Anúncio 2x40 -->
 		<div data-role="page" id="p3" class="paginas">
 			<div data-role="popup" id="mapp3" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/3-10.jpg" class="img-responsive" usemap="#mapp3" />
+				<img src="/storage/sdcard0/airdroid/upload/2-40.jpg" class="img-responsive" usemap="#mapp3" />
 				<map name="mapp3">
-					<area shape="rect" coords="523, 1480, 1020, 1821" class="anuncios" id="anun3x10" data-popup="mapp3" />
-    				<area shape="rect" coords="2, 1480, 505, 1820" class="anuncios" id="anun3x10" data-popup="mapp3" />
+    				<area shape="rect" coords="695, 486, 1023, 1817" class="anuncios" id="anun2x40" data-popup="mapp3" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p3">
@@ -278,19 +291,19 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Anúncio 3x13 -->
+		<!-- // Anúncio 2x40 -->
 		
-		<!-- Anúncio 3x13 -->
+		<!-- Anúncio 3x10 -->
 		<div data-role="page" id="p4" class="paginas">
 			<div data-role="popup" id="mapp4" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/3-13.jpg" class="img-responsive" usemap="#mapp4" />
+				<img src="/storage/sdcard0/airdroid/upload/3-10.jpg" class="img-responsive" usemap="#mapp4" />
 				<map name="mapp4">
-    				<area shape="rect" coords="3, 1403, 506, 1840" class="anuncios" id="anun3x13" data-popup="mapp4" />
-    				<area shape="rect" coords="520, 1403, 1022, 1842" class="anuncios" id="anun3x13" data-popup="mapp4" />
+					<area shape="rect" coords="523, 1480, 1020, 1821" class="anuncios" id="anun3x10" data-popup="mapp4" />
+    				<area shape="rect" coords="2, 1480, 505, 1820" class="anuncios" id="anun3x10" data-popup="mapp4" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p4">
@@ -315,18 +328,19 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Anúncio 3x13 -->
+		<!-- // Anúncio 3x10 -->
 		
-		<!-- Anúncio 3x20 -->
+		<!-- Anúncio 3x13 -->
 		<div data-role="page" id="p5" class="paginas">
 			<div data-role="popup" id="mapp5" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/3-20.jpg" class="img-responsive" usemap="#mapp5" />
+				<img src="/storage/sdcard0/airdroid/upload/3-13.jpg" class="img-responsive" usemap="#mapp5" />
 				<map name="mapp5">
-    				<area shape="rect" coords="2, 1156, 504, 1842" class="anuncios" id="anun3x20" data-popup="mapp5" />
+    				<area shape="rect" coords="3, 1403, 506, 1840" class="anuncios" id="anun3x13" data-popup="mapp5" />
+    				<area shape="rect" coords="520, 1403, 1022, 1842" class="anuncios" id="anun3x13" data-popup="mapp5" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p5">
@@ -351,24 +365,32 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Anúncio 3x20 -->
+		<!-- // Anúncio 3x13 -->
 		
-		<!-- Anúncio 3x26 -->
+		<!-- Anúncio 3x20 -->
 		<div data-role="page" id="p6" class="paginas">
 			<div data-role="popup" id="mapp6" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/3-26.jpg" class="img-responsive" usemap="#mapp6" />
+				<img src="/storage/sdcard0/airdroid/upload/3-20.jpg" class="img-responsive" usemap="#mapp6" />
 				<map name="mapp6">
-					<area shape="rect" coords="2, 1021, 505, 1813" class="anuncios" id="anun3x26" data-popup="mapp6" />
+    				<area shape="rect" coords="2, 1156, 504, 1842" class="anuncios" id="anun3x20" data-popup="mapp6" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p6">
 				<div class="ui-panel-inner">
 					<ul data-role="listview" data-inset="true" data-theme="a">
 						<li data-icon="delete"><a class="fecharPainel">Fechar</a></li>
+						<li><a id="#p2" class="anun2-5">2x5</a></li>
+						<li><a id="#p2" class="anun2-10">2x10</a></li>
+						<li><a id="#p3" class="anun3-13">3x13</a></li>
+						<li><a id="#p4" class="anun3-20">3x20</a></li>
+						<li><a id="#p5" class="anun3-26">3x26</a></li>
+						<li><a id="#p6" class="anun6-10">6x10</a></li>
+						<li><a id="#p7" class="anun6-26">6x26</a></li>
+						<li></li>
 						<li><a id="#p1" class="cad1">Caderno A</a></li>
 						<li><a id="#p18" class="cad2">Cidades</a></li>
 						<li><a id="#p26" class="cad3">Esportes</a></li>
@@ -379,18 +401,18 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Anúncio 3x26 -->
+		<!-- // Anúncio 3x20 -->
 		
-		<!-- Anúncio 6x10 -->
+		<!-- Anúncio 3x26 -->
 		<div data-role="page" id="p7" class="paginas">
 			<div data-role="popup" id="mapp7" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/6-10.jpg" class="img-responsive" usemap="#mapp7" />
+				<img src="/storage/sdcard0/airdroid/upload/3-26.jpg" class="img-responsive" usemap="#mapp7" />
 				<map name="mapp7">
-					<area shape="rect" coords="3, 1495, 1023, 1820" class="anuncios" id="anun6x10" data-popup="mapp7" />
+					<area shape="rect" coords="2, 1021, 505, 1813" class="anuncios" id="anun3x26" data-popup="mapp7" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p7">
@@ -407,21 +429,77 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Anúncio 6x10 -->
+		<!-- // Anúncio 3x26 -->
 		
-		<!-- Anúncio 6x26 -->
+		<!-- Anúncio 6x10 -->
 		<div data-role="page" id="p8" class="paginas">
 			<div data-role="popup" id="mapp8" class="ui-content popup">
 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
 			</div>
 			<div data-role="main">
-				<img src="/storage/sdcard0/airdroid/upload/6-26.jpg" class="img-responsive" usemap="#mapp8" />
+				<img src="/storage/sdcard0/airdroid/upload/6-10.jpg" class="img-responsive" usemap="#mapp8" />
 				<map name="mapp8">
-					<area shape="rect" coords="1, 934, 1022, 1820" class="anuncios" id="anun6x26" data-popup="mapp8" />
+					<area shape="rect" coords="3, 1495, 1023, 1820" class="anuncios" id="anun6x10" data-popup="mapp8" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p8">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete"><a class="fecharPainel">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 6x10 -->
+		
+		<!-- Anúncio 6x26 -->
+		<div data-role="page" id="p9" class="paginas">
+			<div data-role="popup" id="mapp9" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/6-26.jpg" class="img-responsive" usemap="#mapp9" />
+				<map name="mapp9">
+					<area shape="rect" coords="1, 934, 1022, 1820" class="anuncios" id="anun6x26" data-popup="mapp9" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p9">
+				<div class="ui-panel-inner">
+					<ul data-role="listview" data-inset="true" data-theme="a">
+						<li data-icon="delete"><a class="fecharPainel">Fechar</a></li>
+						<li><a id="#p1" class="cad1">Caderno A</a></li>
+						<li><a id="#p18" class="cad2">Cidades</a></li>
+						<li><a id="#p26" class="cad3">Esportes</a></li>
+						<li><a id="#p29" class="cad4">Cultura</a></li>
+						<li><a id="#p34" class="cad5">Jornal do Carro</a></li>
+						<li><a id="#p42" class="cad6">Arte de Morar</a></li>
+					</ul>
+				</div>
+   			</div>
+		</div>
+		<!-- // Anúncio 6x26 --> 
+
+		<!-- Anúncio Ilhado -->
+		<div data-role="page" id="p10" class="paginas">
+			<div data-role="popup" id="mapp10" class="ui-content popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<p style="padding: 10px; font-size: 20px; font-weight: bold;"></p>
+			</div>
+			<div data-role="main">
+				<img src="/storage/sdcard0/airdroid/upload/ilhado.jpg" class="img-responsive" usemap="#mapp10" />
+				<map name="mapp10">
+					<area shape="rect" coords="179, 683, 846, 1267" class="anuncios" id="anunIlhado" data-popup="mapp10" />
+				</map>
+			</div>
+			<div data-role="panel" class="menu" id="p10">
 				<div class="ui-panel-inner">
 					<ul data-role="listview" data-inset="true" data-theme="a">
 						<li data-icon="delete"><a class="fecharPainel">Fechar</a></li>
@@ -614,7 +692,7 @@
 		</div>
 		Página 8 -->
 		
-		<!-- Página 9 -->
+		<!-- Página 9 
 		<div data-role="page" id="p9" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP09.jpg" class="img-responsive" />
@@ -634,9 +712,9 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Página 9 -->
+		// Página 9 -->
 		
-		<!-- Página 10 -->
+		<!-- Página 10 
 		<div data-role="page" id="p10" class="paginas">
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/PP10.jpg" class="img-responsive" />
@@ -656,7 +734,7 @@
 				</div>
    			</div>
 		</div>
-		<!-- // Página 10 -->
+		 Página 10 -->
 		
 		<!-- Página 11 -->
 		<div data-role="page" id="p11" class="paginas">
