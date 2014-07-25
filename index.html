@@ -47,11 +47,11 @@
 				});
 				$(".anuncios").click(function(e){
 					//$(".popup").popup();
-					if($(this).attr("id") == "2-5"){
+					if($(this).attr("id") == "anun2x5"){
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Anúncio 2x5<br />Tamanho: 2col x 5cm");
 						$("#"+popup).popup("open",{positionTo: "window"});
-					}else if($(this).attr("id") == "2-10"){
+					}else if($(this).attr("id") == "anun2x10"){
 						var popup = $(this).attr("data-popup");
 						$("#"+popup+" p").html("Anúncio 2x10<br />Tamanho: 2col x 10cm");
 						$("#"+popup).popup("open",{positionTo: "window"});
@@ -153,10 +153,10 @@
 			<div data-role="main">
 				<img src="/storage/sdcard0/airdroid/upload/2-10-2-5.jpg" class="img-responsive" usemap="#mapp2" />
 				<map name="mapp2">
-    				<area shape="rect" coords="347, 1673, 677, 1841" class="anuncios" id="2-5" data-popup="mapp2" />
-    				<area shape="rect" coords="695, 1496, 1023, 1842" class="anuncios" id="2-10" data-popup="mapp2" />
-    				<area shape="rect" coords="696, 1318, 1022, 1487" class="anuncios" id="2-5" data-popup="mapp2" />
-    				<area shape="rect" coords="347, 1496, 677, 1666" class="anuncios" id="2-5" data-popup="mapp2" />
+    				<area shape="rect" coords="347, 1673, 677, 1841" class="anuncios" id="anun2x5" data-popup="mapp2" />
+    				<area shape="rect" coords="695, 1496, 1023, 1842" class="anuncios" id="anun2x10" data-popup="mapp2" />
+    				<area shape="rect" coords="696, 1318, 1022, 1487" class="anuncios" id="anun2x5" data-popup="mapp2" />
+    				<area shape="rect" coords="347, 1496, 677, 1666" class="anuncios" id="anun2x5" data-popup="mapp2" />
 				</map>
 			</div>
 			<div data-role="panel" class="menu" id="p2">
