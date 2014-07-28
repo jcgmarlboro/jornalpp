@@ -94,9 +94,8 @@
 					$(".menu#"+$(this).attr("id")).panel("open");
 				});
 				$(".fecharPainel").click(function(){
-					$(".menu").panel("close");
+					$(".menu#"+$(this).attr("id")).panel("close");
 				});
-				
 				$(".anun2-5").click(function(){
 					$.mobile.changePage($(this).attr("id"));
 				});
